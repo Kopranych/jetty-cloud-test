@@ -9,7 +9,15 @@ repositories {
     mavenCentral()
 }
 
+ext {
+    jettyVersion = '11.0.21'
+}
+
 dependencies {
+
+    implementation "org.eclipse.jetty:jetty-server:${jettyVersion}"
+    implementation "org.eclipse.jetty:jetty-servlet:${jettyVersion}"
+
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }
